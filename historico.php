@@ -40,6 +40,7 @@ if (isset($_POST['limpar'])) {
                 <th>Descrição</th>
                 <th>Valor</th>
                 <th>Tipo</th>
+                <th>Impacto (%)</th>
             </tr>
             <tbody>
 
@@ -50,6 +51,7 @@ if (isset($_POST['limpar'])) {
                         echo "<td>" . $t["desc"] . "</td>";
                         echo "<td>" . number_format($t["valor"], 2 , ",", ".") . " R$ </td>";
                         echo "<td>" . $t["tipo"] . "</td>";
+                        echo "<td>" . number_format($t["valor"]*100/$_SESSION['movimentacao'], 2) . "%</td>";
                         echo "</tr>";
                     }
                 } else {

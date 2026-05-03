@@ -27,6 +27,7 @@ if (isset($_POST['desc']) && isset($_POST['valor']) && isset($_POST['tipo'])) {
         $_SESSION['despesa'] += $valor;
         $_SESSION['total'] -= $valor;
     }
+    $_SESSION['movimentacao'] += $valor;
 
     header("Location: " . $_SERVER['PHP_SELF']); //evita o formulário ser reenviado quando a página é recarregada
     exit;
